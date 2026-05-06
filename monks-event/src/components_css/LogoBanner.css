@@ -1,0 +1,32 @@
+
+
+.logo-banner {
+  background: #fff8e1;
+  padding: 40px 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  gap: 100px;
+  padding-left: 100px;
+  animation: run 20s linear infinite;
+}
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes run {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.partner-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #555;
+  white-space: nowrap;
+}

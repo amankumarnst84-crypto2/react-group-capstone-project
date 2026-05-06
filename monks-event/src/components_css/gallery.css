@@ -1,0 +1,85 @@
+.gallery-section {
+  padding: 80px 8%;
+  background-color: #fff9e6; /* Match light cream theme */
+  color: #050505;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.insta-btn {
+  background: transparent;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.insta-btn:hover {
+  background: #050505;
+  color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-card {
+  position: relative;
+  height: 450px; /* Tall cards like Instagram posts */
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Gradient Overlay for Text Visibility */
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.gallery-overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gallery-overlay p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
