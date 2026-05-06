@@ -1,0 +1,183 @@
+
+.page-container {
+  min-height: 100vh;
+  background: rgb(11, 10, 11);
+  color: white;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px rgba(66, 135, 245, 0.5);
+}
+
+.main-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.ticket-card {
+  width: 550px;
+  height: 240px;
+  background: linear-gradient(135deg, #1c1c38 0%, #16162d 100%);
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.ticket-left {
+  flex: 3;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.guest-name {
+  font-size: 2.2rem;
+  margin: 10px 0 5px 0;
+  text-transform: uppercase;
+}
+
+.event-tag {
+  color: #4facfe;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-item label {
+  font-size: 9px;
+  color: #888;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.detail-item p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sub-loc { font-weight: normal !important; opacity: 0.7; }
+
+
+.ticket-right {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barcode-mock {
+  width: 100%;
+  height: 60px;
+  background: repeating-linear-gradient(90deg, #fff, #fff 2px, transparent 2px, transparent 4px);
+  opacity: 0.6;
+}
+
+.price-tag p {
+  font-size: 1.5rem;
+  color: #4facfe;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.control-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.input-group input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #4facfe;
+}
+
+.disabled input {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.print-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+
+.print-btn:active { transform: scale(0.98); }
+
+/* Print Styles */
+@media print {
+  body * { visibility: hidden; }
+  #printable-area, #printable-area * { visibility: visible; }
+  #printable-area {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
