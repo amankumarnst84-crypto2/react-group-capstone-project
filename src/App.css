@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth; 
+}
+
+
+body { 
+  margin: 0; 
+  font-family: 'Inter', sans-serif; 
+  background: #000000; 
+  color: white; }
+
+ /* about.css */
+
+.about-section {
+  background: white; 
+  color: black; 
+  margin-top: 50px; 
+  padding-bottom: 100px; 
+}
+
+.about-container { 
+  padding: 80px 8%; 
+}
+.about-header { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 60px; 
+}
+.about-header h2 { 
+  font-size: 40px; 
+  flex: 1; 
+}
+.about-header p { 
+  flex: 1; 
+  color: #666; 
+  font-size: 16px; 
+  line-height: 1.6; 
+}
+
+.about-grid { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 20px; 
+  height: 400px; 
+}
+.about-card {
+  border-radius: 20px; 
+  background: #b14b4b; 
+  position: relative; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: flex-end; 
+  padding: 25px; 
+}
+.card-info span { 
+  font-size: 12px; 
+  color: #a460e4; 
+  font-weight: bold;
+  text-shadow: 1px 1px 1px 1px rgba(255, 253, 254, 0.6);
+}
+.card-info h3 { 
+  font-size: 20px; margin: 10px 0 0 0; 
+}
+
+.card-large { 
+  background: url('./assets/about1.jpg') center/cover; 
+  color: rgb(255, 255, 255);
+  text-shadow: 20px 20px 20px 5px rgba(6, 6, 6, 0.6);
+  transition: 0.5s; 
+ }
+.card-large:hover,.card-mid:nth-child(2):hover,.card-mid:nth-child(3):hover{
+  border: none;
+  background-color: #320514;
+  box-shadow: 0 0 20px 5px rgba(8, 1, 13, 0.6);
+  transform: translateY(-10px); 
+  transition: 0.5s;
+}
+.card-mid:nth-child(2) { background: url('./assets/about2.jpg') center/cover; color: white; }
+.card-mid:nth-child(3) { background: url('./assets/about3.jpg') center/cover; color: white; }
+
